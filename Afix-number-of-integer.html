@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var number = +prompt('Enter a Number');
+    var count = '';
+    if (number <= 1 ){
+        alert('is not a Primes Number')
+    }else {
+        function checkNumber() {
+            for (var i = 1; i <= number; i++) {
+                if (number % i == 0) {
+                    count++
+                }
+            }
+            if( count > 2){
+                alert(number+ " " + " is not a Primes Number");
+            }else{
+                alert(number + " " + "is a Primes Number")
+            }
+        }
+        checkNumber()
+    }
+</script>
+</body>
+</html>
