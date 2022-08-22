@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type ="number" id="number">
+    <button type="button" onclick="calculate()">Tinh</button>
+    <select id="typeOption">
+        <option value="circleArea">Area</option>
+        <option value="diameter">Diameter</option>
+    </select>
+    <p id="exp"></p>
+<script>
+    function calculate(){
+        var number1 =document.getElementById("number").value;
+        var number2 =document.getElementById("typeOption").value;
+        document.getElementById('exp').innerHTML = circleDiameter(number1,number2);
+    }
+    function circleDiameter(number1,number2){
+        if (number2=="circleArea"){
+            return number1 * number1 * 3.14;
+        }
+        if (number2=="diameter"){
+            return 2 * number1 * 3.14;
+        }
+    }
+
+</script>
+
+
+</body>
+</html>
