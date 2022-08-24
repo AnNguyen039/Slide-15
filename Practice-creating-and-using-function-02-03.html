@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculate Factorial Of Number</title>
+</head>
+<body>
+ <input type="number" id="inputNumber">
+<button type="button" onclick="calculateFactorial()">Calculate Factorial</button>
+<p id="exp"></p>
+</body>
+<script>
+    function calculateFactorial(){
+        var number = document.getElementById('inputNumber').value;
+        var result = factorialOfNumber(number);
+        document.getElementById('exp').innerHTML = "Factorial of " + number +" " + "is  " + result;
+    }
+
+    function factorialOfNumber(number){
+        for ( var i = 1, a = 1 ; i <= number ; i++){
+            var a = a * i;
+        }
+        return a;
+    }
+</script>
+</html>

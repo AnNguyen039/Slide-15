@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="number">
+<button type="button" onclick="test()">test</button>
+<script>
+  function test(){
+    var number =document.getElementById('number').value;
+    numbertest(number)
+  }
+  function numbertest(number){
+    if (number % 1 == 0){
+      alert ("True")
+    }else{
+      alert("false")
+    }
+  }
+
+</script>
+
+
+</body>
+</html>
