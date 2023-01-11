@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1>StaffList</h1>
+
+<p>
+  <a th:href="@{create/Staff}"> Create Staff</a>
+</p>
+
+<table border="1">
+  <tr>
+    <th>Staff Code</th>
+    <th>Name</th>
+    <th>Age</th>
+
+
+    <th></th>
+    <th></th>
+  </tr>
+  <th:block th:each="s : ${staff}">
+    <tr>
+      <td th:text="${s.nameStaff}"></td>
+      <td th:text="${e.age}"></td>
+
+
+      <td ><a th:href="@{/edit/{id}(id=${s.id})}">Edit</a></td>
+      <td ><a th:href="@{/delete/{id}(id=${s.id})}">Delete</a></td>
+      <td ><a th:href="@{/view/{id}(id=${s.id})}">View</a></td>
+    </tr>
+  </th:block>
+</table>
+</body>
+</html>
